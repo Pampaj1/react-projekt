@@ -1,10 +1,12 @@
 import './App.css';
+import Home from './Home.jsx'
+
 
 function App() {
   return (
-    <p className="text-green-600 text-center text-5xl font-bold subpixel-antialiased">
-      cso
-    </p>
+    <>
+      <Home />
+    </>
   );
 }
 
