@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-21T19:53:07.270Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="YeLzH4Br1petvA3j3OTj" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-21T19:54:59.485Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="KXcICIflLKNwW5sq0YPm" version="22.1.11" type="github">
   <diagram name="Strona-1" id="quJQ605PLjE0gcsie8XG">
     <mxGraphModel dx="2022" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -483,7 +483,7 @@
         <mxCell id="JSLKp9LOZW84t-LfmxHi-45" value="$12&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-702" y="992.5" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="JSLKp9LOZW84t-LfmxHi-52" value="when menu icon press - slide menu options container from left to right about 50% to 70%" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="JSLKp9LOZW84t-LfmxHi-52" value="when menu icon is&amp;nbsp;pressed - slide menu options container from left to right about 50% to 70%" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-267" y="10" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dvGxufB8YRO6XdmUHJ-9-57" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="j_7O2JsRLly26RKXh7LV-63" target="JSLKp9LOZW84t-LfmxHi-45" edge="1">
