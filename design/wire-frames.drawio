@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-21T19:49:35.207Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="LXL6s4JmxhzEYG_uf5rb" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-21T19:53:07.270Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="YeLzH4Br1petvA3j3OTj" version="22.1.11" type="github">
   <diagram name="Strona-1" id="quJQ605PLjE0gcsie8XG">
     <mxGraphModel dx="2022" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -557,6 +557,15 @@
         </mxCell>
         <mxCell id="JSLKp9LOZW84t-LfmxHi-71" value="confirm purchase" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-406.5" y="1471.75" width="100.75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JSLKp9LOZW84t-LfmxHi-96" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;entryX=0.963;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="JSLKp9LOZW84t-LfmxHi-71" target="j_7O2JsRLly26RKXh7LV-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-570" y="1620" as="sourcePoint" />
+            <mxPoint x="-560" y="1090" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-560" y="1540" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
