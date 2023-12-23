@@ -42,7 +42,7 @@ function LoadingBar() {
         templateHome.setAttribute("display", "true");
       }, 300);
     }
-    
+    //
     function incrementLoadingBar() {
       (percentage < 100)
       ? percentage++
