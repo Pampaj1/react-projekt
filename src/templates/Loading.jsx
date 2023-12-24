@@ -1,6 +1,6 @@
-import burger from "../assets/media/burger.svg";
-import nuggets from "../assets/media/nuggets.svg";
-import wrap from "../assets/media/wrap.svg";
+import burger from "../assets/images/burger.svg";
+import nuggets from "../assets/images/nuggets.svg";
+import wrap from "../assets/images/wrap.svg";
 
 import {useState, useEffect } from "react";
 
