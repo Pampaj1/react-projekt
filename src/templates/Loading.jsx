@@ -1,19 +1,19 @@
-import burger from "./assets/media/burger.svg";
-import nuggets from "./assets/media/nuggets.svg";
-import wrap from "./assets/media/wrap.svg";
+import burger from "../assets/media/burger.svg";
+import nuggets from "../assets/media/nuggets.svg";
+import wrap from "../assets/media/wrap.svg";
 
 import {useState, useEffect } from "react";
 
 function Loading() {
   return (
-    <template-page name="Loading" display="true">
+    <div id="Loading" className="template-page" display="true" style={{ "height": "100vh" }}>
       <div className="relative flex flex-row h-5/6 items-center justify-center">
-        <img className="animate-bounce" width="200" src={nuggets} alt="burger.svg" style={{animationDelay: "-1.25s"}} />
+        <img className="animate-bounce" width="200" src={nuggets} alt="nuggets.svg" style={{animationDelay: "-1.25s"}} />
         <img className="animate-bounce" width="200" src={wrap} alt="wrap.svg" style={{animationDelay: "-1.5s"}} />
-        <img className="animate-bounce absolute" width="200" src={burger} alt="nuggets.svg" style={{animationDelay: "-1.75s"}} />
+        <img className="animate-bounce absolute" width="200" src={burger} alt="burger.svg" style={{animationDelay: "-1.75s"}} />
         <LoadingBar />
       </div>
-    </template-page>
+    </div>
   );
 }
 
@@ -26,23 +26,30 @@ function LoadingBar() {
     function hideLoading() {
       clearInterval(incrementLoadingBar);
 
-      const images = document.querySelectorAll("template-page[name='Loading'] img");
+      const images = document.querySelectorAll("#Loading img");
       const loadingBar = document.querySelector("div[name='loading-bar']");
       
-      loadingBar.classList.add('fade-out');
+      loadingBar.classList.add("fade-out");
       [...images].map(img => {
-        img.classList.add('fade-out')
+        img.classList.add("fade-out")
       });
 
       setTimeout(() => {
-        let templateLoading = document.querySelector("template-page[name='Loading']");
-        let templateHome = document.querySelector("template-page[name='Home']");
+        let templateLoading = document.querySelector("#Loading");
+        let templateHome = document.querySelector("#Home");
+        let bannerImage = templateHome.querySelector(".banner img");
 
         templateLoading.setAttribute("display", "false");
+        templateHome.classList.add("opacity-0");
         templateHome.setAttribute("display", "true");
+
+        setTimeout(() => {
+          templateHome.classList.add("fade-in");
+          bannerImage.classList.add("active");
+        }, 100);
       }, 300);
     }
-    //
+    
     function incrementLoadingBar() {
       (percentage < 100)
       ? percentage++
