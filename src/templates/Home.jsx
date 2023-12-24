@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faBars } from '@fortawesome/free-solid-svg-icons'
 
 import banner from "../assets/images/background.png"
-import img from "../assets/images/wallpaper1.svg"
+import img from "../assets/images/items/bobby.png"
 
 function Home() {
 
