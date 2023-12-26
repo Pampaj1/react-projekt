@@ -72,7 +72,7 @@
 
 
 #Home .banner img {
-  transform: translateY(-500px);
+  /*transform: translateY(15px);*/
   transition: transform .5s linear;
 }
 
