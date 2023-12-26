@@ -9,7 +9,7 @@ function App() {
     <>
       {/*<Loading />*/}
       {/*<Home />*/}
-      {/*<Cart />*/}
+      <Cart />
       {/*<Buy />*/}
     </>
   );
