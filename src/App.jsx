@@ -6,11 +6,9 @@ import Cart from './templates/Cart.jsx'
 function App() {
   return (
     <>
-      {/*
       <Loading />
       <Home />
-      */}
-      <Cart />
+      {/*<Cart />*/}
     </>
   );
 }

@@ -14,7 +14,7 @@ export default function Menu() {
             <FontAwesomeIcon className="text-4xl m-3" icon={faBars} style={{color: "#4aaa4c",}} />
           </button>
 
-          <div className="opacity-0 invisible dropdown-menu transition-all duration-1000 transform origin-top-left -translate-x-[50vw] scale-95">
+          <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-left -translate-x-[50vw] scale-95">
             <div className="absolute left-0 w-56 h-[100vh] origin-top-left bg-white border border-gray-200 divide-y divide-gray-100 shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
               <div className="px-4 py-3">         
                 <a href="#" tabindex="0" className="flex justify-between w-full text-lg leading-5 text-left" role="menuitem">
