@@ -37,6 +37,15 @@
   }
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
 .template-page {
   display: none;
   width: 100vw;
@@ -72,5 +81,16 @@
 }
 
 #Home .promotion {
-  width: calc(48% * 2 + .75rem)
+  width: calc(48% * 2 + .75rem);
+  transform: translateX(-500px);
+  transition: transform .5s linear
 }
+
+#Home .promotion.active {
+  transform: translateX(0px);
+}
+
+#Home .item {
+  animation: slideIn 0.7s ease-in-out forwards;
+}
+

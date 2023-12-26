@@ -36,9 +36,10 @@ function LoadingBar() {
 
       setTimeout(() => {
         let templateLoading = document.querySelector("#Loading");
-        let templateHome = document.querySelector("#Home");
+        let templateHome = document.querySelector("#Home"); 
         let bannerImage = templateHome.querySelector(".banner img");
-
+        let promotion = templateHome.querySelector(".promotion")
+        
         templateLoading.setAttribute("display", "false");
         templateHome.classList.add("opacity-0");
         templateHome.setAttribute("display", "true");
@@ -46,6 +47,8 @@ function LoadingBar() {
         setTimeout(() => {
           templateHome.classList.add("fade-in");
           bannerImage.classList.add("active");
+          promotion.classList.add("active")
+          
         }, 100);
       }, 300);
     }

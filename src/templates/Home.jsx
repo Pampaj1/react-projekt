@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faBars } from '@fortawesome/free-solid-svg-icons'
 
 import banner from "../assets/images/background.png"
-import img from "../assets/images/items/bobby.png"
+import img from "../assets/images/wallpaper1.svg"
 
 function Home() {
 
@@ -10,25 +10,29 @@ function Home() {
     "image": img,
     "title": "burger",
     "description": "",
-    "price": ""
+    "price": "",
+    "delay": 0
   },
   {
     "image": "#",
     "title": "wrap",
     "description": "",
-    "price": ""
+    "price": "",
+    "delay": .1
   },
   {
     "image": "#",
     "title": "3",
     "description": "",
-    "price": ""
+    "price": "",
+    "delay": .2
   },
   {
     "image": "#",
     "title": "4",
     "description": "",
-    "price": ""
+    "price": "",
+    "delay": .3
   }];
 
   return (
@@ -45,7 +49,7 @@ function Home() {
         <div className="flex flex-wrap justify-center gap-3">
           { items.map(item => {
             return (
-              <div className="item rounded-md w-[48%] min-h-[150px] bg-[#df9b6a] text-center shadow-xl">
+              <div className="item rounded-md w-[48%] min-h-[150px] bg-[#df9b6a] text-center shadow-xl translate-y-[500px]" style={{ animationDelay: `${item.delay}s` }}>
                 <img width="100%" src={item.image} className="rounded-md"/> 
               </div>
             );
