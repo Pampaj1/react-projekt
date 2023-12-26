@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faBars } from '@fortawesome/free-solid-svg-icons'
+import Menu from '../components/Menu.jsx'
 
 import banner from "../assets/images/background.png"
 import img from "../assets/images/items/bobby.png"
@@ -38,7 +39,7 @@ function Home() {
       </header>
       <nav>
         <FontAwesomeIcon className="fixed top-0 right-0 text-4xl m-3" icon={faBasketShopping} style={{color: "#4aaa4c",}} />
-        <FontAwesomeIcon className="fixed top-0 left-0 text-4xl m-3" icon={faBars} style={{color: "#4aaa4c",}} />
+        <Menu />
       </nav>
       <main className="w-[100%]">
         <div className="promotion my-5 mx-auto rounded-md  min-h-[150px] bg-[#df9b6a] shadow-xl"></div> 
