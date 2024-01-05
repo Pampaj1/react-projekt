@@ -5,7 +5,28 @@ import Menu from '../components/Menu.jsx'
 import banner from "../assets/images/background.png"
 import img from "../assets/images/wallpaper1.svg"
 
+import { useEffect, useContext } from 'react'
+import { TemplateContext } from '../App'
+
 function Home() {
+  const { template, setTemplate } = useContext(TemplateContext);
+
+  useEffect(() => {
+
+    const templateHome = document.querySelector("#Home"); 
+    const bannerImage = templateHome.querySelector(".banner img");
+    const promotion = templateHome.querySelector(".promotion")
+    
+    templateHome.classList.add("opacity-0");
+    templateHome.setAttribute("display", "true");
+
+    setTimeout(() => {
+      templateHome.classList.add("fade-in");
+      bannerImage.classList.add("active");
+      promotion.classList.add("active")
+      
+    }, 100);
+  })
 
   const items = [{
     "image": img,
@@ -42,7 +63,9 @@ function Home() {
         <img className="h-[350px] max-w-[500px]" src={banner} />
       </header>
       <nav>
-        <FontAwesomeIcon className="fixed top-0 right-0 text-4xl m-3" icon={faBasketShopping} style={{color: "#4aaa4c",}} />
+        <a href="#" onClick={() => setTemplate("Cart")}>
+          <FontAwesomeIcon className="fixed top-0 right-0 text-4xl m-3 z-50" icon={faBasketShopping} style={{color: "#4aaa4c",}} />
+        </a>
         <Menu />
       </nav>
       <main className="w-[100%]">

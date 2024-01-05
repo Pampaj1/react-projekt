@@ -2,7 +2,8 @@ import burger from "../assets/images/burger.svg";
 import nuggets from "../assets/images/nuggets.svg";
 import wrap from "../assets/images/wrap.svg";
 
-import {useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { TemplateContext } from '../App'
 
 function Loading() {
   return (
@@ -17,51 +18,45 @@ function Loading() {
   );
 }
 
+
 function LoadingBar() {
+
   let percentage = 0;
+  const { template, setTemplate } = useContext(TemplateContext);
   
+
+
   useEffect(() => {
     let progressBar = document.querySelector("div[name='progress-bar']");
     
-    function hideLoading() {
+    function hideLoadingAndDisplayHomeTemplate() {
       clearInterval(incrementLoadingBar);
-
+      
       const images = document.querySelectorAll("#Loading img");
       const loadingBar = document.querySelector("div[name='loading-bar']");
       
+      if (!loadingBar || !images) return;
+
       loadingBar.classList.add("fade-out");
       [...images].map(img => {
         img.classList.add("fade-out")
       });
 
-      setTimeout(() => {
-        let templateLoading = document.querySelector("#Loading");
-        let templateHome = document.querySelector("#Home"); 
-        let bannerImage = templateHome.querySelector(".banner img");
-        let promotion = templateHome.querySelector(".promotion")
-        
-        templateLoading.setAttribute("display", "false");
-        templateHome.classList.add("opacity-0");
-        templateHome.setAttribute("display", "true");
-
-        setTimeout(() => {
-          templateHome.classList.add("fade-in");
-          bannerImage.classList.add("active");
-          promotion.classList.add("active")
-          
-        }, 100);
-      }, 300);
+      setTimeout(() => setTemplate("Home"), 500);
     }
-    
+
     function incrementLoadingBar() {
       (percentage < 100)
       ? percentage++
-      : setTimeout(hideLoading, 500);
+      : setTimeout(hideLoadingAndDisplayHomeTemplate, 500);
 
       progressBar.style.width = percentage + '%';
     }
+
+    clearInterval(incrementLoadingBar);
     setInterval(incrementLoadingBar, 10);
   })
+
 
 
   return (
