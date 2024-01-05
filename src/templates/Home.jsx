@@ -60,25 +60,25 @@ function Home() {
   return (
     <div id="Home" className="template-page bg-[#FFF7EB] min-h-[100vh] px-6" display="false">
       <header className="banner relative flex justify-center">
-        <img className="h-[350px] max-w-[500px]" src={banner} />
+        <img className="h-[350px] max-w-[500px]" src={banner} alt="FlavorA banner" />
       </header>
       <nav>
-        <a href="#" onClick={() => setTemplate("Cart")}>
-          <FontAwesomeIcon className="fixed top-0 right-0 text-4xl m-3 z-50" icon={faBasketShopping} style={{color: "#4aaa4c",}} />
+        <a href="#" onClick={() => setTemplate("Cart")} className="fixed top-0 right-0 z-50" title="Cart">
+          <FontAwesomeIcon icon={faBasketShopping} className="text-4xl m-3" style={{color: "#4aaa4c",}} />
         </a>
         <Menu />
       </nav>
-      <main className="w-[100%]">
-        <div className="promotion my-5 mx-auto rounded-md  min-h-[150px] bg-[#df9b6a] shadow-xl"></div> 
-        <div className="flex flex-wrap justify-center gap-3">
+      <main className="w-[100%]" tabindex="0">
+        <button type="button" title="promotion" className="promotion my-5 mx-auto rounded-md  min-h-[150px] bg-[#df9b6a] shadow-xl"></button> 
+        <section className="flex flex-wrap justify-center gap-3">
           { items.map(item => {
             return (
-              <div className="item rounded-md w-[48%] min-h-[150px] bg-[#df9b6a] text-center shadow-xl translate-y-[500px]" style={{ animationDelay: `${item.delay}s` }}>
-                <img width="100%" src={item.image} className="rounded-md"/> 
-              </div>
+              <button type="button" title={item.title} className="item rounded-md w-[48%] min-h-[150px] bg-[#df9b6a] text-center shadow-xl translate-y-[500px]" style={{ animationDelay: `${item.delay}s` }}>
+                <img src={item.image} width="100%" className="rounded-md" alt={item.title} /> 
+              </button>
             );
           })}
-        </div>
+        </section>
       </main>
     </div>
   );
