@@ -69,28 +69,3 @@
   visibility: visible;
   transition: visibility 0s .3s, opacity .3s linear;
 }
-
-
-#Home .banner img {
-  /*transform: translateY(15px);*/
-  transition: transform .5s linear;
-}
-
-#Home .banner img.active {
-  transform: translateY(0px);
-}
-
-#Home .promotion {
-  width: calc(48% * 2 + .75rem);
-  transform: translateX(-500px);
-  transition: transform .5s linear
-}
-
-#Home .promotion.active {
-  transform: translateX(0px);
-}
-
-#Home .item {
-  animation: slideIn 0.7s ease-in-out forwards;
-}
-

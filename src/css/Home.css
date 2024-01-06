@@ -1,0 +1,37 @@
+.banner img {
+  /*transform: translateY(15px);*/
+  transition: transform .5s linear;
+}
+  
+.banner img.active {
+  transform: translateY(0px);
+}
+
+.promotion {
+
+  transform: translateX(-500px);
+  transition: transform .5s linear
+}
+
+.promotion.active {
+  transform: translateX(0px);
+}
+
+.item {
+  animation: slideIn 0.7s ease-in-out forwards;
+}
+
+.item > img {
+  transition: transform .2s;
+}
+.item > img:hover,
+.item:active > img,
+.item:focus-visible > img {
+  transform: scale(1.5);
+}
+.item:hover,
+.item:active,
+.item:focus-visible {
+  z-index: 1;
+}
+
