@@ -6,7 +6,7 @@ import items from '../items.js'
 
 function Cart() {
 
-  const price = 12
+  
   const itemCount = 1;
 
   return (
@@ -35,28 +35,36 @@ function ItemsList() {
 
 function Item() {
   return (
-    <div className="bg-[#ffff] w-[95vw] h-[120px] rounded-lg shadow-md my-5 p-3">
-      <div className=""></div>
+    <div className="bg-[#ffff] w-[95vw] h-[100px] rounded-lg shadow-md my-5 p-3 md:w-[33.3vw]">
+      <div className="">
+      
+      </div>
     </div>
   )
 }
 
 function OptionMenu() {
+
+  const price = 120
+  const shipping = 150
+
+  const total = price + shipping
+
   return (
     <div className="mt-6 h-full w-[95vw] rounded-md border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
         <div className="mb-2 flex justify-between">
           <p className="text-gray-700">Subtotal</p>
-          <p className="text-gray-700">$129.99</p>
+          <p className="text-gray-700">${price} USD</p>
         </div>
         <div className="flex justify-between">
           <p className="text-gray-700">Shipping</p>
-          <p className="text-gray-700">$4.99</p>
+          <p className="text-gray-700">${shipping} USD</p>
         </div>
         <hr className="my-4" />
         <div className="flex justify-between">
           <p className="text-lg font-bold">Total</p>
           <div className="">
-            <p className="mb-1 text-lg font-bold">$134.98 USD</p>
+            <p className="mb-1 text-lg font-bold">${total} USD</p>
             <p className="text-sm text-gray-700">including VAT</p>
           </div>
         </div>
