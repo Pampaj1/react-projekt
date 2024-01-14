@@ -1,5 +1,11 @@
+#Home > main {
+  /* styled at Home.jsx in:
+  - scrollToFoodItem()
+  - scrollToFoodItem() 
+  */
+}
+
 .banner img {
-  /*transform: translateY(15px);*/
   transition: transform .5s linear;
 }
   
@@ -8,7 +14,6 @@
 }
 
 .promotion {
-
   transform: translateX(-500px);
   transition: transform .5s linear
 }
@@ -17,21 +22,37 @@
   transform: translateX(0px);
 }
 
-.item {
+.img {
   animation: slideIn 0.7s ease-in-out forwards;
 }
 
-.item > img {
-  transition: transform .2s;
+@keyframes expandFullWidth {
+  from {width: 0%;}
+  to {width: 100%;}
 }
-.item > img:hover,
-.item:active > img,
-.item:focus-visible > img {
-  transform: scale(1.5);
-}
-.item:hover,
-.item:active,
-.item:focus-visible {
-  z-index: 1;
+.item .details {
+  animation-name: expandFullWidth;
+  animation-duration: 1s;
 }
 
+.item > button > img {
+  transition: transform .2s;
+}
+.item > button > img:hover,
+.item > button:active > img,
+.item > button:focus-visible > img {
+  transform: scale(1.5);
+}
+.item:has(>.details) > button > img {
+  transform: scale(1);
+}
+.item:has(>.details) > button {
+  background-color: white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.item:has(>button:hover),
+.item:has(>button:active),
+.item:has(>button:focus-visible) {
+  z-index: 1;
+}
