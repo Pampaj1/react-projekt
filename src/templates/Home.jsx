@@ -9,7 +9,7 @@ import { TemplateContext } from '../App'
 import Menu from '../components/Menu.jsx'
 import banner from '../assets/images/background.png'
 import items from '../items.js'
-
+import promotion from '../assets/images/backgorund.svg'
 
 
 
@@ -90,7 +90,7 @@ function Home() {
         <Menu />
       </nav>
       <main className="w-full max-w-[500px] mx-auto" tabIndex="0">
-        <button type="button" title="promotion" className="promotion block my-5 mx-auto rounded-md w-full min-h-[150px] bg-[#df9b6a] shadow-xl"></button> 
+        <section title="promotion" className="promotion block my-5 mx-auto rounded-md w-full min-h-[150px] shadow-xl" style={{backgroundImage: `url(${promotion})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}></section> 
         <section className="flex flex-wrap justify-center gap-3 relative">
           { items.map((item, index) => {
             itemDelay += .1; // seconds
