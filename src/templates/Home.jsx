@@ -90,7 +90,7 @@ function Home() {
         <Menu />
       </nav>
       <main className="w-full max-w-[500px] mx-auto" tabIndex="0">
-        <section title="promotion" className="promotion block my-5 mx-auto rounded-md w-full min-h-[150px] shadow-xl" style={{backgroundImage: `url(${promotion})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}></section> 
+        <section title="promotion" className="promotion block my-5 mx-auto rounded-md w-full min-h-[150px] shadow-xl" style={{backgroundImage: `url(${promotion})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPositionY: "center"}}></section> 
         <section className="flex flex-wrap justify-center gap-3 relative">
           { items.map((item, index) => {
             itemDelay += .1; // seconds
