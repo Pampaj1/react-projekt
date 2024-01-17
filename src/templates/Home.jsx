@@ -1,4 +1,5 @@
 import '../css/Home.css';
+import '../css/Fonts.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
@@ -91,7 +92,7 @@ function Home() {
       </nav>
       <main className="w-full max-w-[500px] mx-auto" tabIndex="0">
         <section title="promotion" className="promotion rounded-xl w-[100%] h-[120px] shadow-xl sm:h-[150px]" style={{backgroundImage: `url(${promotion})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}></section> 
-        <section className="flex flex-wrap justify-center gap-3 relative">
+        <section className="flex flex-wrap justify-center gap-3 my-3 relative">
           { items.map((item, index) => {
             itemDelay += .1; // seconds
             itemDelay = Number(itemDelay.toFixed(2));
@@ -104,11 +105,11 @@ function Home() {
               itemClass += " flex justify-center w-full";
               extendedContainer = (
                 <section className="details max-h-[150px] bg-white h-full w-full overflow-hidden p-2 relative shadow-xl rounded-r-md">
-                  <h1 className="item-title text-lg font-medium capitalize truncate">{item.title}</h1>
+                  <h1 className="item-title text-lg font-light capitalize truncate">{item.title}</h1>
                   <hr></hr>
-                  <p className="item-description text-sm break-all line-clamp-3 mb-10">{items[0].description/*item.description*/}</p>
+                  <p className="item-description text-sm font-extralight line-clamp-3 mb-10">{items[0].description/*item.description*/}</p>
                   <div className="absolute bottom-0 mb-[5px] w-[calc(100%-10px)]">
-                    <span className="float-left item-title text-lg font-bold capitalize truncate">${(Math.random() * 100).toFixed(2)/*item.price*/}</span>
+                    <span className="float-left item-title text-lg capitalize truncate">${(Math.random() * 100).toFixed(2)/*item.price*/}</span>
                     <button className="float-right mr-1 bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded-md">ADD</button>
                   </div>
                 </section>

@@ -33,6 +33,7 @@
 .item .details {
   animation-name: expandFullWidth;
   animation-duration: 1s;
+  font-family: 'montserrat', sans-serif;
 }
 
 .item > button > img {
